@@ -1,0 +1,86 @@
+ <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h4><a href="{{ site.baseurl }}/">{{ site.description }}</a></h4>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Menu</p> 
+                    <li class="active">
+                        <a href="#hibahSubmenu" data-toggle="collapse" aria-expanded="false">E-hibahbansos</a>
+                        <ul class="collapse list-unstyled" id="hibahSubmenu">
+                           {% for item in site.ehibahbansos %} 
+							  <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#jawaraSubmenu" data-toggle="collapse" aria-expanded="false">Jawara E-Gov</a>
+                        <ul class="collapse list-unstyled" id="jawaraSubmenu">
+                           {% for item in site.jawara_egov %} 
+							  <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#dshSubmenu" data-toggle="collapse" aria-expanded="false">Dashboard Pimpinan</a>
+                        <ul class="collapse list-unstyled" id="dshSubmenu">
+                           {% for item in site.dashboard_pimpinan %} 
+                              <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sopSubmenu" data-toggle="collapse" aria-expanded="false">Sop Online</a>
+                        <ul class="collapse list-unstyled" id="sopSubmenu">
+                           {% for item in site.sop_online %} 
+                              <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#yankesSubmenu" data-toggle="collapse" aria-expanded="false">Yankes</a>
+                        <ul class="collapse list-unstyled" id="yankesSubmenu">
+                           {% for item in site.yankes %} 
+                              <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li> 
+                    <li>
+                        <a href="#ssoSubmenu" data-toggle="collapse" aria-expanded="false">SSO</a>
+                        <ul class="collapse list-unstyled" id="ssoSubmenu">
+                           {% for item in site.sop_online %} 
+                              <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://github.com/DeveloperBanten/dokumentasi-banten2018" class="download">Download source</a></li> 
+                </ul>
+
+            </nav>
+
+            
+
+<!--
+<div class="sidebar well">
+{{ site.description }}
+</div>
+
+<div class="sidebar well">
+    <h1>Dokumentasi</h1>
+    <ul>
+        {% for post in site.posts limit:5 %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="sidebar well">
+{% include links-list.html %}
+<p class="text-center">
+Wujudkan Banten E-Government Terintegrasi, Sukseskan Banten Satu Data
+</p>
+
+</div>-->
