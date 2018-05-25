@@ -19,8 +19,8 @@
 
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Page</a></li>
-                                <li><a href="#">Page</a></li> 
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li> 
                             </ul>
                         </div>
                     </div>
@@ -30,7 +30,10 @@
         <div class="col-md-12">
           <div class="article">
             <div class="well">
-                <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a></h1>
+                <h3>
+
+                    <a href="{{ site.baseurl}}{{ page.url }}">{{ page.cat }} - {{ page.title }}</a>
+                </h3>
             {% if site.comments and page.comments %}
                 {% if site.disqus != '' %}
                 <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>

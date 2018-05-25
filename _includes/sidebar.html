@@ -46,9 +46,17 @@
                         </ul>
                     </li> 
                     <li>
+                        <a href="#simbadaSubmenu" data-toggle="collapse" aria-expanded="false">Simbada</a>
+                        <ul class="collapse list-unstyled" id="simbadaSubmenu">
+                           {% for item in site.simbada %} 
+                              <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#ssoSubmenu" data-toggle="collapse" aria-expanded="false">SSO</a>
                         <ul class="collapse list-unstyled" id="ssoSubmenu">
-                           {% for item in site.sop_online %} 
+                           {% for item in site.sso %} 
                               <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
                             {% endfor %}
                         </ul>
@@ -57,6 +65,9 @@
 
                 <ul class="list-unstyled CTAs">
                     <li><a href="https://github.com/DeveloperBanten/dokumentasi-banten2018" class="download">Download source</a></li> 
+                    <li>
+                         <p class="copyright">&copy;{{ site.time | date: '%Y' }} {{ site.name }}.  </p>
+                    </li>
                 </ul>
 
             </nav>
